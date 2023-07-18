@@ -12,7 +12,7 @@ var passwordLength = "";
 function generatePassword(){
   console.log("You clicked the button!"); 
   character = ""; 
-  password = "";
+ password = "";
 
 //User prompts for the password criteria
 
@@ -33,7 +33,7 @@ var length = Number(characterLength);
   else {alert("You have chosen not to include uppercase letters.");
 }
 
-  if (confirm("Do you want to include numbers?")) { character = character.concat(number); alert("You have chosen to include numbers.");} 
+  if (confirm("Do you want to include numbers?")) { character = character.concat(numbers); alert("You have chosen to include numbers.");} 
   else {alert("You have chosen not to include numbers.");
 }
 
@@ -53,8 +53,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  alert("Your password is " + password);
-}
+  }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
