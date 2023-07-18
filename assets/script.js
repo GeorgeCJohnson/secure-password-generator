@@ -12,7 +12,7 @@ var passwordLength = "";
 function generatePassword(){
   console.log("You clicked the button!"); 
   character = ""; 
- password = "";
+  password = "";
 
 //User prompts for the password criteria
 
