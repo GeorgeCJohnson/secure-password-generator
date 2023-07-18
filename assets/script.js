@@ -26,23 +26,20 @@ var length = Number(characterLength);
     }
 
   if (confirm("Do you want to include lowercase letters?")) {alert("You have chosen to include lowercase letters.");}
-  else {alert("You have chosen not to include lowercase letters.");
+  else {character = character.concat(lowerCase);alert("You have chosen not to include lowercase letters.");
 }
 
-  if (confirm("Do you want to include uppercase letters?")) {alert("You have chosen to include uppercase letters.");}
+  if (confirm("Do you want to include uppercase letters?")) {
+    character = character.concat(uppercase); alert("You have chosen to include uppercase letters.");}
   else {alert("You have chosen not to include uppercase letters.");
 }
 
-  if (confirm("Do you want to include numbers?")) {alert("You have chosen to include numbers.");} 
+  if (confirm("Do you want to include numbers?")) { character = character.concat(number); alert("You have chosen to include numbers.");} 
   else {alert("You have chosen not to include numbers.");
 }
 
-  if (confirm("Do you want to include special characters?")) {alert("You have chosen to include special characters.");}
+  if (confirm("Do you want to include special characters?")) {character = character.concat(special); alert("You have chosen to include special characters.");}
   else {alert("You have chosen not to include special characters.");
-}
-
-  if (confirm("Do you want to include all the above?")) {alert("You have chosen to include all the above.");}
-  else {alert("You have chosen not to include all the above.");
 }
 
   for (var i = 0 ; i < characterLength; i++) {
