@@ -22,15 +22,14 @@ var length = Number(characterLength);
 
   if (length = NaN || characterLength < 8 || characterLength > 128) {
     alert("Enter a valid number of characters between 8 and 128.");
-    return "Please try again.";
+    return password();
     }
 
-  if (confirm("Do you want to include lowercase letters?")) {alert("You have chosen to include lowercase letters.");}
-  else {character = character.concat(lowerCase);alert("You have chosen not to include lowercase letters.");
+  if (confirm("Do you want to include lowercase letters?")) {character = character.concat(lowerCase);alert("You have chosen to include lowercase letters.");}
+  else {alert("You have chosen not to include lowercase letters.");
 }
 
-  if (confirm("Do you want to include uppercase letters?")) {
-    character = character.concat(uppercase); alert("You have chosen to include uppercase letters.");}
+  if (confirm("Do you want to include uppercase letters?")) {character = character.concat(upperCase); alert("You have chosen to include uppercase letters.");}
   else {alert("You have chosen not to include uppercase letters.");
 }
 
@@ -45,7 +44,7 @@ var length = Number(characterLength);
   for (var i = 0 ; i < characterLength; i++) {
     password += character[Math.floor(Math.random()*character.length)];
     }
-    return password; 
+    return generatePassword; 
 }
 
 // Write password to the #password input
