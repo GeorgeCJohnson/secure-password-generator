@@ -1,3 +1,4 @@
+// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 //Declare characters to be used in password
