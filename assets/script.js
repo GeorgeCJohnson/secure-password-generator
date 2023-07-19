@@ -24,40 +24,43 @@ function generatePassword() {
 
 //User prompts for the password criteria every time a selection is made it is also confirmed.
 
-var characterLength = prompt("Please choose the number of character you want between 8 and 128."); 
-
-var length = Number(characterLength);
-
-    if (length == NaN || characterLength < 8 || characterLength > 128) {
-    alert("Enter a valid number of characters between 8 and 128.");
-    return "Please try again.";
+    if (isNaN(characterLength) || characterLength < 8 || characterLength > 128) {
+        alert("Enter a valid number of characters between 8 and 128.");
+        return "Please try again.";
     }
 
-    if (confirm("Do you want to include lowercase letters?")) {character = character.concat(lowercase);alert("You have chosen to include lowercase letters.");}
-    else {alert("You have chosen not to include lowercase letters.");
+    if (confirm("Do you want to include lowercase letters?")) {
+        choiceArray = choiceArray.concat(lowerCaseArray);
+        typeCheck = true
     }
 
-    if (confirm("Do you want to include uppercase letters?")) {character = character.concat(uppercase); alert("You have chosen to include uppercase letters.");}
-    else {alert("You have chosen not to include uppercase letters.");
+    if (confirm("Do you want to include uppercase letters?")) {
+        choiceArray = choiceArray.concat(upperCaseArray);
+        typeCheck = true
     }
 
-    if (confirm("Do you want to include numbers?")) { character = character.concat(numbers); alert("You have chosen to include numbers.");} 
-    else {alert("You have chosen not to include numbers.");
+    if (confirm("Do you want to include numbers?")) {
+        choiceArray = choiceArray.concat(numberArray);
+        typeCheck = true
     }
 
-    if (confirm("Do you want to include special characters?")) {character = character.concat(special); alert("You have chosen to include special characters.");}
-    else {alert("You have chosen not to include special characters.");
+    if (confirm("Do you want to include special characters?")) {
+        choiceArray = choiceArray.concat(specialCharactersArrayy);
+        typeCheck = true
     }
 
+    if (!typeCheck) {
+        alert("You must choose at least one character type for your password.");
+        return generatePassword();
+    }
+
+    var password = "";
     for (var i = 0; i < characterLength; i++) {
-    var randomIndex = Math.floor(Math.random() * character.length);
-    var password += character[randomIndex]
+        var randomIndex = Math.floor(Math.random() * choiceArray.length);
+        password += choiceArray[randomIndex]
     }
-
-    return generatePassword; 
+    return password;
 }
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
