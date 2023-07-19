@@ -8,13 +8,19 @@ var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L"
 var specialCharactersArrayy = ["+", "-", "&&", "||", "!", "(", ")", "{", "}", "[", "]", "^", "~", "*", "?", ":",];
 var numberArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+  }
 
 function generatePassword() {
-  console.log("You clicked the button!"); 
-  var 
-  character = ""; 
-  password = "";
-  var typeCheck = false;
+    console.log("You clicked the button!");
+    var choiceArray = [];
+    var typeCheck = false
+    var characterLength = parseInt(prompt("Please choose the number of character you want between 8 and 128."));
 
 //User prompts for the password criteria every time a selection is made it is also confirmed.
 
@@ -51,13 +57,7 @@ var length = Number(characterLength);
     return generatePassword; 
 }
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-  }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
