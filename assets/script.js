@@ -46,7 +46,7 @@ function generatePassword() {
     }
 
     if (confirm("Do you want to include special characters?")) {
-        choiceArray = choiceArray.concat(specialCharactersArrayy);
+        choiceArray = choiceArray.concat(specialCharactersArray);
         typeCheck = true
     }
 
