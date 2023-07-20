@@ -21,7 +21,7 @@ function generatePassword() {
     console.log("You clicked the button!");
     var choiceArray = [];
     var typeCheck = false
-    var characterLength = parseInt(prompt("Please choose the number of character you want between 8 and 128."));
+    var characterLength = parseInt(prompt("Please choose the number of characters you want between 8 and 128."));
 
 //User prompts for the password criteria every time a selection is made it is also confirmed.
 
