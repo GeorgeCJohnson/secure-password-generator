@@ -13,6 +13,7 @@ The first prompt on the website will ask the user to select the length of the de
 
 ## Project Link:
 
+https://georgecjohnson.github.io/secure-password-generator/
 
 ## Source Code:
 
