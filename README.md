@@ -2,7 +2,7 @@
 
 ## Description:
 
-Open the webpage or the applaction of the password generator. Locate the input button labeled "Generate Password". Click on the Generate Password button to move forward with the process of generating your password. You will be prompted to select and specify the length of the password you desire followed with the next prompt to generate your password.
+Open the webpage or the application of the password generator. Locate the input button labeled "Generate Password". Click on the Generate Password button to move forward with the process of generating your password. You will be prompted to select and specify the length of the password you desire followed with the next prompt to generate your password.
 
 ## How it Works:
 
