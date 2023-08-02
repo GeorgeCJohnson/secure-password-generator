@@ -10,7 +10,6 @@ The first prompt on the website will ask the user to select the length of the de
 
 ![website screenshot](/assets/images/passwordgen.png)
 
-
 ## Project Link:
 
 https://georgecjohnson.github.io/secure-password-generator/
